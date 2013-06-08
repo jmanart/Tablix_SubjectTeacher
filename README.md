@@ -21,4 +21,4 @@ See License file
 
 Credits
 -------
-Thanks to Tomaž Šolc for creating this very useful piece of code.
+Thanks to Tomaz Solc for creating this very useful piece of code.
