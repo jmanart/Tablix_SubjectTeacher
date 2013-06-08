@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ttm PUBLIC "-//Tablix//DTD TTM 0.2.0//EN" "http://www.tablix.org/releases/dtd/tablix2r0.dtd">
+<ttm version="0.2.0">
+  <info>
+    <title>Example high school</title>
+    <author>Jesus Manzanares</author>
+  </info>
+  <modules>
+    <module name="subjectteacher" weight="200" mandatory="yes"/>
+    <module name="sametime" weight="300" mandatory="yes"/>
+    <module name="timeplace" weight="300" mandatory="yes"/>
+  </modules>
+  <resources>
+    <constant>
+      <resourcetype type="subject">
+        <resource name="Maths"/>
+        <resource name="Science"/>
+        <resource name="English"/>
+        <resource name="Literature"/>
+      </resourcetype>
+      <resourcetype type="class">
+        <resource name="1 A"/>
+        <resource name="1 B"/>
+        <resource name="1 C"/>
+        <resource name="1 D"/>
+      </resourcetype>
+    </constant>
+    <variable>
+      <resourcetype type="time">
+        <matrix width="5" height="2"/>
+      </resourcetype>
+      <resourcetype type="room">
+        <linear name="clase #" from="1" to="4">
+				</linear>
+      </resourcetype>
+      <resourcetype type="teacher">
+        <resource name="ProfMaths">
+          <restriction type="teaches-subject">Maths</restriction>
+        </resource>
+        <resource name="ProfScience">
+          <restriction type="teaches-subject">Science</restriction>
+        </resource>
+        <resource name="ProfEnglish">
+          <restriction type="teaches-subject">English</restriction>
+        </resource>
+        <resource name="ProfLiterature">
+          <restriction type="teaches-subject">Literature</restriction>
+        </resource>
+      </resourcetype>
+    </variable>
+  </resources>
+  <events>
+    <event name="maths 1a" repeats="3">
+      <resource type="class" name="1 A"/>
+      <resource type="subject" name="Maths"/>
+    </event>
+    <event name="maths 1b" repeats="3">
+      <resource type="class" name="1 B"/>
+      <resource type="subject" name="Maths"/>
+    </event>
+    <event name="maths 1c" repeats="3">
+      <resource type="class" name="1 C"/>
+      <resource type="subject" name="Maths"/>
+    </event>
+    <event name="maths 1d" repeats="3">
+      <resource type="class" name="1 D"/>
+      <resource type="subject" name="Maths"/>
+    </event>
+    <event name="literature 1a" repeats="3">
+      <resource type="class" name="1 A"/>
+      <resource type="subject" name="Literature"/>
+    </event>
+    <event name="literature 1b" repeats="3">
+      <resource type="class" name="1 B"/>
+      <resource type="subject" name="Literature"/>
+    </event>
+    <event name="literature 1c" repeats="3">
+      <resource type="class" name="1 C"/>
+      <resource type="subject" name="Literature"/>
+    </event>
+    <event name="literature 1d" repeats="3">
+      <resource type="class" name="1 D"/>
+      <resource type="subject" name="Literature"/>
+    </event>
+    <event name="science 1a" repeats="2">
+      <resource type="class" name="1 A"/>
+      <resource type="subject" name="Science"/>
+    </event>
+    <event name="science 1b" repeats="2">
+      <resource type="class" name="1 B"/>
+      <resource type="subject" name="Science"/>
+    </event>
+    <event name="science 1c" repeats="2">
+      <resource type="class" name="1 C"/>
+      <resource type="subject" name="Science"/>
+    </event>
+    <event name="science 1d" repeats="2">
+      <resource type="class" name="1 D"/>
+      <resource type="subject" name="Science"/>
+    </event>
+    <event name="english 1a" repeats="2">
+      <resource type="class" name="1 A"/>
+      <resource type="subject" name="English"/>
+    </event>
+    <event name="english 1b" repeats="2">
+      <resource type="class" name="1 B"/>
+      <resource type="subject" name="English"/>
+    </event>
+    <event name="english 1c" repeats="2">
+      <resource type="class" name="1 C"/>
+      <resource type="subject" name="English"/>
+    </event>
+    <event name="english 1d" repeats="2">
+      <resource type="class" name="1 D"/>
+      <resource type="subject" name="English"/>
+    </event>
+  </events>
+</ttm>
